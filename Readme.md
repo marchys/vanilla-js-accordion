@@ -1,0 +1,1 @@
+A simple vanilla js accordion with Saas
