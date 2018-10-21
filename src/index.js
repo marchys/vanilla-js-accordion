@@ -1,7 +1,7 @@
 import compose from 'lodash/fp/compose';
 import createAccordion, { addSection } from './components/accordion';
 
-import adviceClient from './libs/adviceClient';
+import chuckNorrisClient from './libs/chuckNorrisClient';
 
 import './index.scss';
 
@@ -16,12 +16,10 @@ const component = compose(
 
 const startRequest = async () => {
   const {
-    data: {
-      slip: { advice },
-    },
-  } = await adviceClient.get();
+    data: { value },
+  } = await chuckNorrisClient.get('/jokes/random');
 
-  addSection('Section 4', advice, component);
+  addSection('Section 4', value, component);
 };
 
 startRequest();
