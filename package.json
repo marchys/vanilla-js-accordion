@@ -6,6 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --hot --open --mode development",
     "build": "webpack --mode production --config webpack.config.js",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -14,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
+    "gh-pages": "^2.0.1",
     "lodash": "^4.17.11"
   },
   "devDependencies": {

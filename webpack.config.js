@@ -6,7 +6,7 @@ module.exports = {
   entry: 'index.js',
   output: {
     path: paths.appDist,
-    publicPath: '/',
+    publicPath: paths.publicPath,
     filename: 'main.js',
   },
   module: {
