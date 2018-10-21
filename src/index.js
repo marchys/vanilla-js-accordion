@@ -1,13 +1,13 @@
+import compose from 'lodash/fp/compose';
+import createAccordion, { addSection } from './components/accordion';
+
 import './index.scss';
-
-function createText(text) {
-  const textElement = document.createElement('p');
-
-  textElement.innerHTML = text;
-
-  return textElement;
-}
 
 const rootComponent = document.getElementById('root');
 
-rootComponent.appendChild(createText('hello world'));
+compose(
+  addSection('Section 3', 'Section 3 Content...'),
+  addSection('Section 2', 'Section 2 Content...'),
+  addSection('Section 1', 'Section 1 Content...'),
+  createAccordion,
+)(rootComponent);

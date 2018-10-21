@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render global element 1`] = `"<div></div><dl class=\\"Accordion\\"></dl>"`;

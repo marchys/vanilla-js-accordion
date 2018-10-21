@@ -8,6 +8,8 @@ module.exports = {
   rules: {
     // http://eslint.org/docs/rules/
     'no-void': 0,
+    'arrow-parens': ['error', 'as-needed'],
+
     // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
     'import/prefer-default-export': 1,
     'import/no-extraneous-dependencies': 1,
